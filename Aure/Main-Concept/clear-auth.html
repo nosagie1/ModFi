@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Authentication</title>
+</head>
+<body>
+    <script>
+        // Clear all authentication data
+        localStorage.removeItem('userAuthenticated');
+        localStorage.removeItem('currentUserId');
+        localStorage.clear();
+        
+        // Fire auth state change event
+        window.dispatchEvent(new Event('authStateChange'));
+        
+        // Redirect to signup page
+        window.location.href = '/signup';
+    </script>
+    <p>Clearing authentication and redirecting to signup...</p>
+</body>
+</html>

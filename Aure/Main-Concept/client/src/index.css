@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(216, 12%, 97%); /* #F5F6F8 - Primary Background */
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(0, 0%, 88%); /* #E0E0E0 - Accent Shadow/Border Gray */
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%); /* #FFFFFF - Card/Section Backgrounds */
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%); /* #FFFFFF - Card/Section Backgrounds */
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(0, 0%, 88%); /* #E0E0E0 - Accent Shadow/Border Gray */
+  --input: hsl(0, 0%, 100%); /* #FFFFFF - Card/Section Backgrounds */
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(0, 0%, 88%); /* #E0E0E0 - Accent Shadow/Border Gray */
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(0, 0%, 88%); /* #E0E0E0 - Accent Shadow/Border Gray */
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom banking app colors */
+  --dark-bg: hsl(216, 12%, 97%); /* #F5F6F8 - Primary Background */
+  --card-bg: hsl(0, 0%, 100%); /* #FFFFFF - Card/Section Backgrounds */
+  --lime-accent: hsl(75, 82%, 53%);
+  --text-secondary: hsl(0, 0%, 40%);
+}
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.scrollbar-track-gray-100::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+}
+
+.scrollbar-thumb-gray-400:hover::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .banking-light-bg {
+    background-color: var(--background);
+  }
+  
+  .banking-card-bg {
+    background-color: var(--card-bg);
+  }
+  
+  .banking-lime-accent {
+    background-color: var(--lime-accent);
+  }
+  
+  .banking-text-secondary {
+    color: var(--text-secondary);
+  }
+  
+  .banking-gradient {
+    background: linear-gradient(135deg, hsl(220, 75%, 90%) 0%, hsl(270, 75%, 90%) 100%);
+  }
+  
+  .banking-shadow {
+    box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.1);
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

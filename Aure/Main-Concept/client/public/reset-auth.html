@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reset Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .button {
+            background-color: #000;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Reset Authentication</h2>
+    <p>Click the button below to clear your authentication and redirect to login:</p>
+    
+    <button class="button" onclick="resetAuth()">Reset & Login</button>
+    
+    <script>
+        function resetAuth() {
+            // Clear all authentication data
+            localStorage.removeItem('userAuthenticated');
+            localStorage.removeItem('currentUserId');
+            localStorage.removeItem('hasVisited');
+            localStorage.clear();
+            
+            // Fire auth state change event
+            window.dispatchEvent(new Event('authStateChange'));
+            
+            // Redirect to home (splash) page
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
