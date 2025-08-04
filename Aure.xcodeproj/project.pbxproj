@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		753DCB5F2E20D55F0076DBB2 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 753DCB5E2E20D55F0076DBB2 /* Auth */; };
+		753DCB612E20D55F0076DBB2 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 753DCB602E20D55F0076DBB2 /* Functions */; };
+		753DCB632E20D55F0076DBB2 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 753DCB622E20D55F0076DBB2 /* PostgREST */; };
+		753DCB652E20D55F0076DBB2 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 753DCB642E20D55F0076DBB2 /* Realtime */; };
+		753DCB672E20D55F0076DBB2 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 753DCB662E20D55F0076DBB2 /* Storage */; };
+		753DCB692E20D55F0076DBB2 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 753DCB682E20D55F0076DBB2 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		753DCAEE2E1ED6300076DBB2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,15 +38,31 @@
 		753DCAF72E1ED6300076DBB2 /* AureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		753DCBB42E342EF50076DBB2 /* Exceptions for "Aure" folder in "Aure" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Features/Profile/AureTests/AureTests.swift,
+			);
+			target = 753DCADA2E1ED62E0076DBB2 /* Aure */;
+		};
+		753DCBB52E342EF50076DBB2 /* Exceptions for "Aure" folder in "AureTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Features/Profile/AureTests/AureTests.swift,
+			);
+			target = 753DCAEC2E1ED6300076DBB2 /* AureTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		753DCADD2E1ED62E0076DBB2 /* Aure */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				753DCBB42E342EF50076DBB2 /* Exceptions for "Aure" folder in "Aure" target */,
+				753DCBB52E342EF50076DBB2 /* Exceptions for "Aure" folder in "AureTests" target */,
+			);
 			path = Aure;
-			sourceTree = "<group>";
-		};
-		753DCAF02E1ED6300076DBB2 /* AureTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AureTests;
 			sourceTree = "<group>";
 		};
 		753DCAFA2E1ED6300076DBB2 /* AureUITests */ = {
@@ -52,6 +77,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753DCB632E20D55F0076DBB2 /* PostgREST in Frameworks */,
+				753DCB612E20D55F0076DBB2 /* Functions in Frameworks */,
+				753DCB692E20D55F0076DBB2 /* Supabase in Frameworks */,
+				753DCB5F2E20D55F0076DBB2 /* Auth in Frameworks */,
+				753DCB672E20D55F0076DBB2 /* Storage in Frameworks */,
+				753DCB652E20D55F0076DBB2 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				753DCADD2E1ED62E0076DBB2 /* Aure */,
-				753DCAF02E1ED6300076DBB2 /* AureTests */,
 				753DCAFA2E1ED6300076DBB2 /* AureUITests */,
 				753DCADC2E1ED62E0076DBB2 /* Products */,
 			);
@@ -112,6 +142,12 @@
 			);
 			name = Aure;
 			packageProductDependencies = (
+				753DCB5E2E20D55F0076DBB2 /* Auth */,
+				753DCB602E20D55F0076DBB2 /* Functions */,
+				753DCB622E20D55F0076DBB2 /* PostgREST */,
+				753DCB642E20D55F0076DBB2 /* Realtime */,
+				753DCB662E20D55F0076DBB2 /* Storage */,
+				753DCB682E20D55F0076DBB2 /* Supabase */,
 			);
 			productName = Aure;
 			productReference = 753DCADB2E1ED62E0076DBB2 /* Aure.app */;
@@ -129,9 +165,6 @@
 			);
 			dependencies = (
 				753DCAEF2E1ED6300076DBB2 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				753DCAF02E1ED6300076DBB2 /* AureTests */,
 			);
 			name = AureTests;
 			packageProductDependencies = (
@@ -195,6 +228,9 @@
 			);
 			mainGroup = 753DCAD22E1ED62E0076DBB2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				753DCB5D2E20D55F0076DBB2 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 753DCADC2E1ED62E0076DBB2 /* Products */;
 			projectDirPath = "";
@@ -552,6 +588,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		753DCB5D2E20D55F0076DBB2 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		753DCB5E2E20D55F0076DBB2 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 753DCB5D2E20D55F0076DBB2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		753DCB602E20D55F0076DBB2 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 753DCB5D2E20D55F0076DBB2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		753DCB622E20D55F0076DBB2 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 753DCB5D2E20D55F0076DBB2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		753DCB642E20D55F0076DBB2 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 753DCB5D2E20D55F0076DBB2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		753DCB662E20D55F0076DBB2 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 753DCB5D2E20D55F0076DBB2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		753DCB682E20D55F0076DBB2 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 753DCB5D2E20D55F0076DBB2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 753DCAD32E1ED62E0076DBB2 /* Project object */;
 }
